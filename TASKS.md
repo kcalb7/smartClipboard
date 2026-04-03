@@ -21,29 +21,29 @@
 **Agentes**: DevOps, Architect
 
 ### 1.1 Inicialização do Projeto
-- [ ] Criar projeto Expo com TypeScript (`npx create-expo-app@latest ./`)
-- [ ] Configurar `tsconfig.json` (strict mode)
-- [ ] Configurar `app.json` / `app.config.js` (nome, ícone, splash, permissions)
-- [ ] Configurar `.gitignore` (node_modules, android/, ios/, google-services.json, keystores)
-- [ ] Inicializar repositório Git (`git init`, primeiro commit)
-- [ ] Criar estrutura de branch (`main` → `develop`)
-- [ ] Criar README.md com instruções de setup
+- [x] Criar projeto Expo com TypeScript (`npx create-expo-app@latest ./`)
+- [x] Configurar `tsconfig.json` (strict mode)
+- [x] Configurar `app.json` / `app.config.js` (nome, ícone, splash, permissions)
+- [x] Configurar `.gitignore` (node_modules, android/, ios/, google-services.json, keystores)
+- [x] Inicializar repositório Git (`git init`, primeiro commit)
+- [x] Criar estrutura de branch (`main` → `develop`)
+- [x] Criar README.md com instruções de setup
 
 ### 1.2 Estrutura de Diretórios
-- [ ] Criar diretórios: `app/`, `components/`, `contexts/`, `hooks/`, `services/`, `modules/`, `plugins/`, `utils/`, `types/`, `assets/`
-- [ ] Criar sub-diretórios: `components/ui/`, `components/clip/`, `components/editor/`, `components/common/`
-- [ ] Criar sub-diretórios: `app/categories/`, `app/settings/`, `app/editor/`
+- [x] Criar diretórios: `app/`, `components/`, `contexts/`, `hooks/`, `services/`, `modules/`, `plugins/`, `utils/`, `types/`, `assets/`
+- [x] Criar sub-diretórios: `components/ui/`, `components/clip/`, `components/editor/`, `components/common/`
+- [x] Criar sub-diretórios: `app/categories/`, `app/settings/`, `app/editor/`
 
 ### 1.3 Configuração de Build
-- [ ] Instalar `expo-dev-client`
-- [ ] Configurar `eas.json` (profiles: development, preview, production)
-- [ ] Fazer primeiro `npx expo prebuild --platform android`
-- [ ] Validar build de desenvolvimento no device/emulador
+- [x] Instalar `expo-dev-client`
+- [x] Configurar `eas.json` (profiles: development, preview, production)
+- [x] Fazer primeiro `npx expo prebuild --platform android`
+- [x] Validar build de desenvolvimento no device/emulador
 
 ### 1.4 Design Tokens
-- [ ] Criar `utils/colors.ts` (paleta azul/branco definida no PRD)
-- [ ] Criar `utils/typography.ts` (font families, sizes, weights)
-- [ ] Criar `utils/constants.ts` (spacing, sizing, border radius)
+- [x] Criar `utils/colors.ts` (paleta azul/branco definida no PRD)
+- [x] Criar `utils/typography.ts` (font families, sizes, weights)
+- [x] Criar `utils/constants.ts` (spacing, sizing, border radius)
 
 ---
 
@@ -425,7 +425,7 @@ Fase 1 (Setup)
 
 | Fase | Estimativa | Status |
 |---|---|---|
-| Fase 1: Setup & Scaffolding | 1-2 dias | Pendente |
+| Fase 1: Setup & Scaffolding | 1-2 dias | Concluído |
 | Fase 2: Módulos Nativos | 5-8 dias | Pendente |
 | Fase 3: Database & Services | 3-4 dias | Pendente |
 | Fase 4: Autenticação | 2-3 dias | Pendente |
