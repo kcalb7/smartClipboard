@@ -212,6 +212,9 @@ Este documento define os **agentes AI especializados** que serão utilizados dur
 
 ## 4. Regras Globais (Todos os Agentes)
 
+- **Confirmação de Fase**: Somente avance para a próxima fase do projeto após confirmação explícita do usuário.
+- **Teste com Build**: Sempre que algo for ajustado, alterado, acrescentado ou removido, testar obrigatoriamente com build (`npx expo prebuild` ou similar) para garantir integridade.
+
 ### 4.1 Código
 
 - **TypeScript strict mode** — sempre.
