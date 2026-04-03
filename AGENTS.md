@@ -31,6 +31,9 @@ Este documento define os **agentes AI especializados** que serão utilizados dur
 - Manter a regra de "mínimo de libs de terceiros".
 - Qualquer mudança arquitetural deve atualizar o SPECS.md.
 - Qualquer evolução do app deve atualiar PRD.md.
+- Commitar sempre que algum dos .md forem alterados, contudo commitar somente os .md.
+- Novas features e bugfix podem ser imediatamente commitados.
+- Alterações devem ter seu commit autorizado.
 
 **Contexto necessário:**
 - PRD.md, SPECS.md
