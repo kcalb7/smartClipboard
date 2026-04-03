@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["SmartClipboardServiceModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.smartclipboardservice.SmartClipboardServiceModule"]
+  }
+}

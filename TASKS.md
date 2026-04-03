@@ -52,50 +52,51 @@
 **Agentes**: Native Module, Architect
 
 ### 2.1 Expo Module: smart-clipboard-service
-- [ ] Criar módulo local (`npx create-expo-module@latest --local`)
-- [ ] Implementar `ClipboardForegroundService.kt`
-  - [ ] Notification channel setup
-  - [ ] `startForeground()` com notificação persistente
-  - [ ] Lifecycle management (start/stop)
-- [ ] Implementar `ClipboardMonitor.kt`
-  - [ ] Registrar `OnPrimaryClipChangedListener`
-  - [ ] Emitir eventos para JS ao detectar mudança
-  - [ ] Leitura de clipboard em contexto foreground
-- [ ] Implementar `SmartClipboardServiceModule.kt`
-  - [ ] `startService()`, `stopService()`, `isServiceRunning()`
-  - [ ] `getClipboardContent()`, `setClipboardContent()`
-  - [ ] Eventos: `onClipboardChange`
-- [ ] Criar interface TypeScript (`index.ts`)
+- [x] Criar módulo local (`npx create-expo-module@latest --local`)
+- [x] Implementar `ClipboardForegroundService.kt`
+  - [x] Notification channel setup
+  - [x] `startForeground()` com notificação persistente
+  - [x] Lifecycle management (start/stop)
+- [x] Implementar `ClipboardMonitor.kt`
+  - [x] Registrar `OnPrimaryClipChangedListener`
+  - [x] Emitir eventos para JS ao detectar mudança
+  - [x] Leitura de clipboard em contexto foreground
+- [x] Implementar `SmartClipboardServiceModule.kt`
+  - [x] `startService()`, `stopService()`, `isServiceRunning()`
+  - [x] `getClipboardContent()`, `setClipboardContent()`
+  - [x] Eventos: `onClipboardChange`
+- [x] Criar interface TypeScript (`index.ts`)
 - [ ] Testar em Android 8.0 (API 26)
 - [ ] Testar em Android 12 (API 31) — toast de clipboard
 - [ ] Testar em Android 14 (API 34) — foreground service type
 
 ### 2.2 Expo Module: smart-clipboard-overlay
-- [ ] Criar módulo local (`npx create-expo-module@latest --local`)
-- [ ] Implementar `BubbleView.kt`
-  - [ ] Layout XML / composição da view
-  - [ ] Ícone circular com animação de pulse
-  - [ ] Touch listeners (tap, long press, drag)
-- [ ] Implementar `BubbleService.kt`
-  - [ ] `WindowManager.addView()` com `TYPE_APPLICATION_OVERLAY`
-  - [ ] LayoutParams configuráveis (posição, tamanho, opacidade)
-  - [ ] Drag & drop com limites de tela
-  - [ ] Expansão para painel (estado expandido)
-- [ ] Implementar `SmartClipboardOverlayModule.kt`
-  - [ ] `showBubble()`, `hideBubble()`, `isBubbleVisible()`
-  - [ ] `setBubblePosition()`, `setBubbleSize()`, `setBubbleOpacity()`
-  - [ ] Eventos: `onBubbleTap`, `onBubbleLongPress`, `onBubbleDragEnd`, `onClipboardChanged`
-- [ ] Criar interface TypeScript (`index.ts`)
+- [x] Criar módulo local (`npx create-expo-module@latest --local`)
+- [x] Implementar `BubbleView.kt`
+  - [x] Layout XML / composição da view
+  - [x] Ícone circular com animação de pulse
+  - [x] Touch listeners (tap, long press, drag)
+- [x] Implementar `BubbleService.kt`
+  - [x] `WindowManager.addView()` com `TYPE_APPLICATION_OVERLAY`
+  - [x] LayoutParams configuráveis (posição, tamanho, opacidade)
+  - [x] Drag & drop com limites de tela
+  - [x] Expansão para painel (estado expandido)
+- [x] Implementar `SmartClipboardOverlayModule.kt`
+  - [x] `showBubble()`, `hideBubble()`, `isBubbleVisible()`
+  - [x] `setBubblePosition()`, `setBubbleSize()`, `setBubbleOpacity()`
+  - [x] Eventos: `onBubbleTap`, `onBubbleLongPress`, `onBubbleDragEnd`, `onClipboardChanged`
+- [x] Criar interface TypeScript (`index.ts`)
 - [ ] Testar em múltiplas dimensões de tela
 - [ ] Testar interação com apps populares (WhatsApp, Chrome, etc.)
 
 ### 2.3 Config Plugin
-- [ ] Criar `plugins/withSmartClipboard.js`
-  - [ ] Injetar permissões no AndroidManifest
-  - [ ] Registrar service no AndroidManifest
-  - [ ] Configurar `foregroundServiceType` (API 34+)
-- [ ] Validar que `npx expo prebuild` aplica corretamente
-- [ ] Documentar permissões necessárias
+- [x] Criar `plugins/withSmartClipboard.js`
+  - [x] Injetar permissões no AndroidManifest
+  - [x] Registrar service no AndroidManifest
+  - [x] Configurar `foregroundServiceType` (API 34+)
+- [x] Validar que `npx expo prebuild` aplica corretamente
+- [x] Documentar permissões necessárias
+
 
 ---
 
