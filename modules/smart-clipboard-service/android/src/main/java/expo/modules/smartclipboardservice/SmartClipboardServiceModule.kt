@@ -1,3 +1,6 @@
+package expo.modules.smartclipboardservice
+
+import android.app.ActivityManager
 import android.content.Context
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
@@ -7,6 +10,7 @@ class SmartClipboardServiceModule : Module() {
         get() = requireNotNull(appContext.reactContext) { "React context is not available" }
 
     companion object {
+        // WeakRef-style: null-safe singleton for event emission from native layer
         private var instance: SmartClipboardServiceModule? = null
 
         fun onClipChange(text: String) {
@@ -36,8 +40,12 @@ class SmartClipboardServiceModule : Module() {
         }
 
         Function("isServiceRunning") {
-            // Implementation of check would go here, simplified for now
-            true 
+            @Suppress("DEPRECATION")
+            val manager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+            @Suppress("DEPRECATION")
+            manager.getRunningServices(Integer.MAX_VALUE).any {
+                it.service.className == ClipboardForegroundService::class.java.name
+            }
         }
     }
 }

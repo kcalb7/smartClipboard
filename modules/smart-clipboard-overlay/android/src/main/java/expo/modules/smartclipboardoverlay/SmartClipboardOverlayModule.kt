@@ -1,3 +1,6 @@
+package expo.modules.smartclipboardoverlay
+
+import android.app.ActivityManager
 import android.content.Context
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
@@ -36,8 +39,12 @@ class SmartClipboardOverlayModule : Module() {
         }
 
         Function("isBubbleVisible") {
-            // Check implementation would be here
-            true
+            @Suppress("DEPRECATION")
+            val manager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+            @Suppress("DEPRECATION")
+            manager.getRunningServices(Integer.MAX_VALUE).any {
+                it.service.className == BubbleService::class.java.name
+            }
         }
     }
 }
